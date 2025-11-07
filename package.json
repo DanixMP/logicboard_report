@@ -1,0 +1,24 @@
+{
+  "name": "repotpage",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "scripts": {
+    "compress": "node compress-images.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanixMP/logicboard_report.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanixMP/logicboard_report/issues"
+  },
+  "homepage": "https://github.com/DanixMP/logicboard_report#readme",
+  "description": "",
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  }
+}
