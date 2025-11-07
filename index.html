@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>گزارش کار گیت‌های منطقی</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header (Hidden on greeting page, shown on day pages) -->
+    <header id="main-header" class="hidden">
+        <nav class="nav-container">
+            <button class="home-btn" id="home-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+                <span>صفحه اصلی</span>
+            </button>
+            <div class="nav-buttons">
+                <button class="nav-btn active" data-day="1">روز اول</button>
+                <button class="nav-btn" data-day="2">روز دوم</button>
+                <button class="nav-btn" data-day="3">روز سوم</button>
+            </div>
+            <div class="nav-underline"></div>
+        </nav>
+    </header>
+
+    <!-- Greeting Page -->
+    <div id="greeting-page" class="page active">
+        <div class="greeting-container">
+            <h1 class="main-title">گزارش کار گیت‌های منطقی</h1>
+            <h2 class="secound-title">آزمایشگاه مدار های منطقی</h2>
+            
+            <!-- Day Image Display (hidden initially) -->
+            <div id="greeting-image-container" class="greeting-image-container hidden">
+                <img id="greeting-day-image" src="" alt="تصویر روز" class="greeting-day-image">
+            </div>
+            
+            <div class="day-buttons">
+                <button class="glass-btn" data-day="1">
+                    <span class="btn-content">
+                        <span class="day-number">01</span>
+                        <span class="day-label">روز اول</span>
+                    </span>
+                </button>
+                <button class="glass-btn" data-day="2">
+                    <span class="btn-content">
+                        <span class="day-number">02</span>
+                        <span class="day-label">روز دوم</span>
+                    </span>
+                </button>
+                <button class="glass-btn" data-day="3">
+                    <span class="btn-content">
+                        <span class="day-number">03</span>
+                        <span class="day-label">روز سوم</span>
+                    </span>
+                </button>
+                <button class="glass-btn album-btn" id="album-btn">
+                    <span class="btn-content">
+                        <span class="day-number">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                                <polyline points="21 15 16 10 5 21"></polyline>
+                            </svg>
+                        </span>
+                        <span class="day-label">آلبوم تصاویر</span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Day 1 Page -->
+    <div id="day-1-page" class="page day-page">
+        <div class="hero-title-container">
+            <h1 class="hero-title">روز اول</h1>
+        </div>
+
+        <!-- Section 1: Image Display -->
+        <section class="section hero-section">
+            <div class="glass-container">
+                <div class="image-placeholder">
+                    <img src="images/day-one.jpg" alt="مدار روز اول" class="circuit-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Formula and Description -->
+        <section class="section formula-section">
+            <div class="glass-container">
+                <h2>فرمول و توضیحات</h2>
+                <div class="formula-content">
+                    <p class="formula">DECODER</p>
+                    <p class="description">یعنی فقط وقتی هر سه Enable برابر 0 (فعال) باشند، خروجی‌ها واکنش نشان می‌دهند.
+خروجی‌ها Active Low هستند، یعنی مقدار 0 یعنی "چراغ روشن" و مقدار 1 یعنی "خاموش".</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Truth Table -->
+        <section class="section table-section">
+            <div class="glass-container">
+                <h2>جدول فعال‌سازی دیکودر 3-8</h2>
+                <div class="table-container">
+                    <table class="truth-table decoder-table">
+                        <thead>
+                            <tr>
+                                <th>خروجی فعال (د = 0 روشن)</th>
+                                <th>A0</th>
+                                <th>A1</th>
+                                <th>A2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="output-label">Q0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="output-label">Q1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="output-label">Q2</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="output-label">Q3</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td class="output-label">Q4</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="output-label">Q5</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="output-label">Q6</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td class="output-label">Q7</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Diagram Display -->
+        <section class="section diagram-section">
+            <div class="glass-container">
+                <h2>دیاگرام مدار</h2>
+                <div class="diagram-placeholder">
+                    <img src="images/decoder-diag.jpg" class="circuit-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Live Logic Display -->
+        <section class="section live-section">
+            <div class="glass-container">
+                <h2>شبیه‌ساز زنده دیکودر 3-8</h2>
+                <div class="logic-simulator decoder-simulator">
+                    <div class="decoder-layout">
+                        <!-- Input Controls -->
+                        <div class="decoder-inputs">
+                            <div class="control-group">
+                                <label>S0 (A0)</label>
+                                <button class="power-btn decoder-input" data-input="S0" data-day="1">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>S1 (A1)</label>
+                                <button class="power-btn decoder-input" data-input="S1" data-day="1">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>S2 (A2)</label>
+                                <button class="power-btn decoder-input" data-input="S2" data-day="1">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Enable (E)</label>
+                                <button class="power-btn decoder-input active" data-input="E" data-day="1">1</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Decoder Box -->
+                        <div class="decoder-box">
+                            <div class="decoder-label">3 to 8 Decoder</div>
+                        </div>
+                        
+                        <!-- Output Display -->
+                        <div class="decoder-outputs">
+                            <div class="output-item">
+                                <span class="output-label">D0</span>
+                                <div class="output-led" id="output-d0"></div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">D1</span>
+                                <div class="output-led" id="output-d1"></div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">D2</span>
+                                <div class="output-led" id="output-d2"></div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">D3</span>
+                                <div class="output-led" id="output-d3"></div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">D4</span>
+                                <div class="output-led" id="output-d4"></div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">D5</span>
+                                <div class="output-led" id="output-d5"></div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">D6</span>
+                                <div class="output-led" id="output-d6"></div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">D7</span>
+                                <div class="output-led" id="output-d7"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Day 2 Page -->
+    <div id="day-2-page" class="page day-page">
+        <div class="hero-title-container">
+            <h1 class="hero-title">روز دوم</h1>
+        </div>
+        
+        <!-- Test Selector -->
+        <div class="test-selector-container">
+            <nav class="test-nav-container">
+                <div class="test-nav-buttons">
+                    <button class="test-nav-btn active" data-test="1" data-day="2">آزمایش اول</button>
+                    <button class="test-nav-btn" data-test="2" data-day="2">آزمایش دوم</button>
+                </div>
+                <div class="test-nav-underline"></div>
+            </nav>
+        </div>
+        
+        <!-- Test 1 Content -->
+        <div id="day-2-test-1" class="test-content active">
+        <section class="section hero-section">
+            <div class="glass-container">
+                <div class="image-placeholder">
+                    <img src="images/day-two.jpg" alt="مدار روز دوم" class="circuit-image">
+                </div>
+            </div>
+        </section>
+        <section class="section formula-section">
+            <div class="glass-container">
+                <h2>فرمول و توضیحات</h2>
+                <div class="formula-content">
+                    <p class="formula">ENCODER</p>
+                    <p class="description">انکدر (Encoder) یک مدار ترکیبی منطقی است که وظیفه دارد چندین ورودی را به تعداد کمتری از خطوط خروجی تبدیل کند.
+در انکدر ۸ به ۳، مدار دارای هشت ورودی (D₀ تا D₇) و سه خروجی دودویی (Q₂، Q₁، Q₀) است که نشان‌دهندهٔ شمارهٔ ورودی فعال می‌باشد.
+
+در هر لحظه تنها یکی از ورودی‌ها باید فعال (منطق ۱) باشد. به عنوان مثال:
+
+اگر D3 = 1 باشد، خروجی‌ها مقدار Q₂Q₁Q₀ = 011 را خواهند داشت.
+
+اگر D7 = 1 باشد، خروجی‌ها مقدار Q₂Q₁Q₀ = 111 خواهند داشت.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section table-section">
+            <div class="glass-container">
+                <h2>جدول درستی انکودر 8-3</h2>
+                <div class="table-container">
+                    <table class="truth-table encoder-table-simple">
+                        <thead>
+                            <tr>
+                                <th colspan="3">خروجی‌ها (OUTPUTS)</th>
+                                <th>ورودی‌ها (INPUTS)</th>
+                            </tr>
+                            <tr>
+                                <th>A0</th>
+                                <th>A1</th>
+                                <th>A2</th>
+                                <th>ورودی فعال</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="active-input">D0 (Y0)</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td class="active-input">D1 (Y1)</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td class="active-input">D2 (Y2)</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td class="active-input">D3 (Y3)</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td class="active-input">D4 (Y4)</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td class="active-input">D5 (Y5)</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="active-input">D6 (Y6)</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td class="active-input">D7 (Y7)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="section diagram-section">
+            <div class="glass-container">
+                <h2>دیاگرام مدار</h2>
+                <div class="diagram-placeholder">
+                    <img src="images/encoder-diag.jpg" alt="دیاگرام انکودر" class="circuit-image">
+                </div>
+            </div>
+        </section>
+        <section class="section live-section">
+            <div class="glass-container">
+                <h2>شبیه‌ساز زنده انکودر 8-3</h2>
+                <div class="logic-simulator encoder-simulator">
+                    <div class="encoder-layout">
+                        <!-- Input Controls -->
+                        <div class="encoder-inputs">
+                            <div class="control-group">
+                                <label>Y7</label>
+                                <button class="power-btn encoder-input" data-input="Y7" data-day="2">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Y6</label>
+                                <button class="power-btn encoder-input" data-input="Y6" data-day="2">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Y5</label>
+                                <button class="power-btn encoder-input" data-input="Y5" data-day="2">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Y4</label>
+                                <button class="power-btn encoder-input" data-input="Y4" data-day="2">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Y3</label>
+                                <button class="power-btn encoder-input" data-input="Y3" data-day="2">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Y2</label>
+                                <button class="power-btn encoder-input" data-input="Y2" data-day="2">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Y1</label>
+                                <button class="power-btn encoder-input" data-input="Y1" data-day="2">0</button>
+                            </div>
+                            <div class="control-group">
+                                <label>Y0</label>
+                                <button class="power-btn encoder-input" data-input="Y0" data-day="2">0</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Encoder Box -->
+                        <div class="encoder-box">
+                            <div class="encoder-label">8:3 Encoder</div>
+                        </div>
+                        
+                        <!-- Output Display -->
+                        <div class="encoder-outputs">
+                            <div class="output-item">
+                                <span class="output-label">A2</span>
+                                <div class="output-value-display" id="encoder-output-a2">0</div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">A1</span>
+                                <div class="output-value-display" id="encoder-output-a1">0</div>
+                            </div>
+                            <div class="output-item">
+                                <span class="output-label">A0</span>
+                                <div class="output-value-display" id="encoder-output-a0">0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+        
+        <!-- Test 2 Content -->
+        <div id="day-2-test-2" class="test-content">
+        <section class="section hero-section">
+            <div class="glass-container">
+                <div class="image-placeholder">
+                    <img src="images/day-two-test2.jpg" alt="مدار آزمایش دوم" class="circuit-image">
+                </div>
+            </div>
+        </section>
+        <section class="section formula-section">
+            <div class="glass-container">
+                <h2>فرمول و توضیحات</h2>
+                <div class="formula-content">
+                    <p class="formula">Gray to Binary Conversion</p>
+                    <p class="description">تبدیل کد گری به باینری با استفاده از گیت‌های XOR:<br>
+                    B2 = G2<br>
+                    B1 = B2 ⊕ G1<br>
+                    B0 = B1 ⊕ G0</p>
+                </div>
+            </div>
+        </section>
+        <section class="section table-section">
+            <div class="glass-container">
+                <h2>جدول تبدیل باینری ↔ گری</h2>
+                <div class="table-container">
+                    <table class="truth-table gray-binary-table">
+                        <thead>
+                            <tr>
+                                <th colspan="3">Binary (B2 B1 B0)</th>
+                                <th colspan="3">Gray (G2 G1 G0)</th>
+                            </tr>
+                            <tr>
+                                <th>B2</th>
+                                <th>B1</th>
+                                <th>B0</th>
+                                <th>G2</th>
+                                <th>G1</th>
+                                <th>G0</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="section diagram-section">
+            <div class="glass-container">
+                <h2>دیاگرام مدار</h2>
+                <div class="diagram-placeholder">
+                    <img src="images/diagram-test-two.jpg" class="circuit-image">
+                </div>
+            </div>
+        </section>
+        <section class="section live-section">
+            <div class="glass-container">
+                <h2>شبیه‌ساز تبدیل گری به باینری</h2>
+                <div class="logic-simulator gray-binary-simulator">
+                    <div class="gray-binary-layout">
+                        <!-- Gray Code Inputs -->
+                        <div class="gray-inputs">
+                            <h3>Gray Code Input</h3>
+                            <div class="input-row">
+                                <div class="control-group">
+                                    <label>G0</label>
+                                    <button class="power-btn gray-input" data-input="G0" data-test="2">0</button>
+                                </div>
+                                <div class="control-group">
+                                    <label>G1</label>
+                                    <button class="power-btn gray-input" data-input="G1" data-test="2">0</button>
+                                </div>
+                                <div class="control-group">
+                                    <label>G2</label>
+                                    <button class="power-btn gray-input" data-input="G2" data-test="2">0</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- XOR Gates Visualization -->
+                        <div class="xor-gates-container">
+                            <canvas id="gray-binary-canvas" class="gray-binary-canvas"></canvas>
+                        </div>
+                        
+                        <!-- Binary Outputs -->
+                        <div class="binary-outputs">
+                            <h3>Binary Output</h3>
+                            <div class="output-row">
+                                <div class="output-item">
+                                    <span class="output-label">B0</span>
+                                    <div class="output-value-display" id="binary-output-b0">0</div>
+                                </div>
+                                <div class="output-item">
+                                    <span class="output-label">B1</span>
+                                    <div class="output-value-display" id="binary-output-b1">0</div>
+                                </div>
+                                <div class="output-item">
+                                    <span class="output-label">B2</span>
+                                    <div class="output-value-display" id="binary-output-b2">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <!-- Day 3 Page -->
+    <div id="day-3-page" class="page day-page">
+        <div class="hero-title-container">
+            <h1 class="hero-title">روز سوم</h1>
+        </div>
+        
+        <!-- Test Selector -->
+        <div class="test-selector-container">
+            <nav class="test-nav-container">
+                <div class="test-nav-buttons">
+                    <button class="test-nav-btn active" data-test="1" data-day="3">آزمایش اول</button>
+                    <button class="test-nav-btn" data-test="2" data-day="3">آزمایش دوم</button>
+                </div>
+                <div class="test-nav-underline"></div>
+            </nav>
+        </div>
+        
+        <!-- Test 1 Content -->
+        <div id="day-3-test-1" class="test-content active">
+        <section class="section hero-section">
+            <div class="glass-container">
+                <div class="image-placeholder">
+                    <img src="images/day-three.jpg" alt="مدار روز سوم" class="circuit-image">
+                </div>
+            </div>
+        </section>
+        <section class="section formula-section">
+            <div class="glass-container">
+                <h2>فرمول و توضیحات</h2>
+                <div class="formula-content">
+                    <p class="formula">BCD to 7-Segment Decoder</p>
+                    <p class="description">تبدیل کد BCD (باینری دهدهی) به نمایشگر 7 بخشی برای نمایش اعداد 0 تا 9</p>
+                </div>
+            </div>
+        </section>
+        <section class="section table-section">
+            <div class="glass-container">
+                <h2>جدول درستی BCD به 7-Segment</h2>
+                <div class="table-container">
+                    <table class="truth-table bcd-table">
+                        <thead>
+                            <tr>
+                                <th colspan="4">BCD Input</th>
+                                <th>Display</th>
+                            </tr>
+                            <tr>
+                                <th>D</th>
+                                <th>C</th>
+                                <th>B</th>
+                                <th>A</th>
+                                <th>Digit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td><td>0</td><td>0</td><td>0</td>
+                                <td class="digit-display">0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>0</td><td>0</td><td>1</td>
+                                <td class="digit-display">1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>0</td><td>1</td><td>0</td>
+                                <td class="digit-display">2</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>0</td><td>1</td><td>1</td>
+                                <td class="digit-display">3</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>1</td><td>0</td><td>0</td>
+                                <td class="digit-display">4</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>1</td><td>0</td><td>1</td>
+                                <td class="digit-display">5</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>1</td><td>1</td><td>0</td>
+                                <td class="digit-display">6</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>1</td><td>1</td><td>1</td>
+                                <td class="digit-display">7</td>
+                            </tr>
+                            <tr>
+                                <td>1</td><td>0</td><td>0</td><td>0</td>
+                                <td class="digit-display">8</td>
+                            </tr>
+                            <tr>
+                                <td>1</td><td>0</td><td>0</td><td>1</td>
+                                <td class="digit-display">9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="section diagram-section">
+            <div class="glass-container">
+                <h2>دیاگرام مدار</h2>
+                <div class="diagram-placeholder">
+                    <img src="images/bcd-diagram.jpg" class="circuit-diagram">
+                </div>
+            </div>
+        </section>
+        <section class="section live-section">
+            <div class="glass-container">
+                <h2>شبیه‌ساز BCD به 7-Segment</h2>
+                <div class="logic-simulator bcd-simulator">
+                    <div class="bcd-layout">
+                        <!-- BCD Inputs -->
+                        <div class="bcd-inputs">
+                            <h3>BCD Input</h3>
+                            <div class="input-row">
+                                <div class="control-group">
+                                    <label>A</label>
+                                    <button class="power-btn bcd-input" data-input="A" data-day="3">0</button>
+                                </div>
+                                <div class="control-group">
+                                    <label>B</label>
+                                    <button class="power-btn bcd-input" data-input="B" data-day="3">0</button>
+                                </div>
+                                <div class="control-group">
+                                    <label>C</label>
+                                    <button class="power-btn bcd-input" data-input="C" data-day="3">0</button>
+                                </div>
+                                <div class="control-group">
+                                    <label>D</label>
+                                    <button class="power-btn bcd-input" data-input="D" data-day="3">0</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 7-Segment Display -->
+                        <div class="seven-segment-container">
+                            <svg class="seven-segment-display" viewBox="0 0 200 300">
+                                <!-- Segment a (top) -->
+                                <polygon id="seg-a" points="50,30 150,30 140,40 60,40" class="segment"/>
+                                <!-- Segment b (top right) -->
+                                <polygon id="seg-b" points="150,30 160,40 160,140 150,130 140,40" class="segment"/>
+                                <!-- Segment c (bottom right) -->
+                                <polygon id="seg-c" points="150,160 160,150 160,250 150,260 140,250" class="segment"/>
+                                <!-- Segment d (bottom) -->
+                                <polygon id="seg-d" points="50,260 60,250 140,250 150,260 140,270 60,270" class="segment"/>
+                                <!-- Segment e (bottom left) -->
+                                <polygon id="seg-e" points="40,150 50,160 50,260 40,250" class="segment"/>
+                                <!-- Segment f (top left) -->
+                                <polygon id="seg-f" points="40,40 50,30 50,130 40,140" class="segment"/>
+                                <!-- Segment g (middle) -->
+                                <polygon id="seg-g" points="50,145 60,135 140,135 150,145 140,155 60,155" class="segment"/>
+                            </svg>
+                            <div class="decimal-display" id="decimal-value">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+        
+        <!-- Test 2 Content -->
+        <div id="day-3-test-2" class="test-content">
+        <section class="section hero-section">
+            <div class="glass-container">
+                <div class="image-placeholder">
+                    <img src="images/multiplexer.jpg" alt="مدار آزمایش دوم" class="circuit-image">
+                </div>
+            </div>
+        </section>
+        <section class="section formula-section">
+            <div class="glass-container">
+                <h2>فرمول و توضیحات</h2>
+                <div class="formula-content">
+                    <p class="formula">8-to-1 Multiplexer (MUX)</p>
+                    <p class="description">مالتی‌پلکسر 8 به 1: انتخاب یکی از 8 ورودی بر اساس 3 بیت انتخابگر (S2, S1, S0)</p>
+                </div>
+            </div>
+        </section>
+        <section class="section table-section">
+            <div class="glass-container">
+                <h2>جدول درستی مالتی‌پلکسر 8-1</h2>
+                <div class="table-container">
+                    <table class="truth-table mux-table">
+                        <thead>
+                            <tr>
+                                <th colspan="3">Selection Inputs</th>
+                                <th>Output</th>
+                            </tr>
+                            <tr>
+                                <th>S2</th>
+                                <th>S1</th>
+                                <th>S0</th>
+                                <th>Y</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0</td><td>0</td><td>0</td>
+                                <td class="mux-output">I0</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>0</td><td>1</td>
+                                <td class="mux-output">I1</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>1</td><td>0</td>
+                                <td class="mux-output">I2</td>
+                            </tr>
+                            <tr>
+                                <td>0</td><td>1</td><td>1</td>
+                                <td class="mux-output">I3</td>
+                            </tr>
+                            <tr>
+                                <td>1</td><td>0</td><td>0</td>
+                                <td class="mux-output">I4</td>
+                            </tr>
+                            <tr>
+                                <td>1</td><td>0</td><td>1</td>
+                                <td class="mux-output">I5</td>
+                            </tr>
+                            <tr>
+                                <td>1</td><td>1</td><td>0</td>
+                                <td class="mux-output">I6</td>
+                            </tr>
+                            <tr>
+                                <td>1</td><td>1</td><td>1</td>
+                                <td class="mux-output">I7</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <section class="section diagram-section">
+            <div class="glass-container">
+                <h2>دیاگرام مدار</h2>
+                <div class="diagram-placeholder">
+                <img src="images/multiplexer-diagram.jpg" class="circuit-diagram">
+                </div>
+            </div>
+        </section>
+        <section class="section live-section">
+            <div class="glass-container">
+                <h2>شبیه‌ساز مالتی‌پلکسر 8-1</h2>
+                <div class="logic-simulator mux-simulator">
+                    <div class="mux-layout">
+                        <!-- Data Inputs -->
+                        <div class="mux-data-inputs">
+                            <h3>Data Inputs</h3>
+                            <div class="input-column">
+                                <div class="control-group" data-input-num="0">
+                                    <label>I0</label>
+                                    <button class="power-btn mux-data-input" data-input="I0" data-day="3">0</button>
+                                </div>
+                                <div class="control-group" data-input-num="1">
+                                    <label>I1</label>
+                                    <button class="power-btn mux-data-input" data-input="I1" data-day="3">0</button>
+                                </div>
+                                <div class="control-group" data-input-num="2">
+                                    <label>I2</label>
+                                    <button class="power-btn mux-data-input" data-input="I2" data-day="3">0</button>
+                                </div>
+                                <div class="control-group" data-input-num="3">
+                                    <label>I3</label>
+                                    <button class="power-btn mux-data-input" data-input="I3" data-day="3">0</button>
+                                </div>
+                                <div class="control-group" data-input-num="4">
+                                    <label>I4</label>
+                                    <button class="power-btn mux-data-input" data-input="I4" data-day="3">0</button>
+                                </div>
+                                <div class="control-group" data-input-num="5">
+                                    <label>I5</label>
+                                    <button class="power-btn mux-data-input" data-input="I5" data-day="3">0</button>
+                                </div>
+                                <div class="control-group" data-input-num="6">
+                                    <label>I6</label>
+                                    <button class="power-btn mux-data-input" data-input="I6" data-day="3">0</button>
+                                </div>
+                                <div class="control-group" data-input-num="7">
+                                    <label>I7</label>
+                                    <button class="power-btn mux-data-input" data-input="I7" data-day="3">0</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- MUX Diagram -->
+                        <div class="mux-diagram-container">
+                            <canvas id="mux-canvas" class="mux-canvas"></canvas>
+                        </div>
+                        
+                        <!-- Selection and Output -->
+                        <div class="mux-controls">
+                            <div class="mux-selectors">
+                                <h3>Selection</h3>
+                                <div class="input-row">
+                                    <div class="control-group">
+                                        <label>S0</label>
+                                        <button class="power-btn mux-select" data-input="S0" data-day="3">0</button>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>S1</label>
+                                        <button class="power-btn mux-select" data-input="S1" data-day="3">0</button>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>S2</label>
+                                        <button class="power-btn mux-select" data-input="S2" data-day="3">0</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mux-enable">
+                                <h3>Enable</h3>
+                                <div class="control-group">
+                                    <label>EN</label>
+                                    <button class="power-btn mux-enable-btn active" data-input="EN" data-day="3">1</button>
+                                </div>
+                            </div>
+                            <div class="mux-outputs-container">
+                                <h3>Outputs</h3>
+                                <div class="mux-dual-outputs">
+                                    <div class="output-group">
+                                        <span class="output-label">Y</span>
+                                        <div class="output-led" id="mux-output-y"></div>
+                                    </div>
+                                    <div class="output-group">
+                                        <span class="output-label">Y'</span>
+                                        <div class="output-led" id="mux-output-not"></div>
+                                    </div>
+                                </div>
+                                <div class="selected-input-label" id="selected-input">Selected: I0</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </div>
+
+    <!-- Album Page -->
+    <div id="album-page" class="page day-page">
+        <div class="hero-title-container">
+            <h1 class="hero-title">آلبوم تصاویر</h1>
+        </div>
+
+        <section class="section album-section">
+            <div class="glass-container">
+                <div class="album-filters">
+                    <button class="filter-btn active" data-filter="all">همه تصاویر</button>
+                    <button class="filter-btn" data-filter="day-1">روز اول</button>
+                    <button class="filter-btn" data-filter="day-2">روز دوم</button>
+                    <button class="filter-btn" data-filter="day-3">روز سوم</button>
+                    <button class="filter-btn easter-egg-btn" data-filter="easter-egg">
+                        <span>🥚 Easter Egg</span>
+                    </button>
+                </div>
+                <div class="album-grid"></div>
+                    <!-- Day 1 Images -->
+                    <div class="album-item" data-category="day-1">
+                        <div class="album-image-wrapper">
+                            <img src="images/day-one.jpg" alt="مدار روز اول" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">مدار روز اول</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-1">
+                        <div class="album-image-wrapper">
+                            <img src="images/decoder-diag.jpg" alt="دیاگرام دیکودر" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">دیاگرام دیکودر</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-1">
+                        <div class="album-image-wrapper">
+                            <img src="images/hero-day-one.jpg" alt="روز اول" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">روز اول</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 2 Images -->
+                    <div class="album-item" data-category="day-2">
+                        <div class="album-image-wrapper">
+                            <img src="images/day-two.jpg" alt="مدار روز دوم" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">مدار روز دوم</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-2">
+                        <div class="album-image-wrapper">
+                            <img src="images/encoder-diag.jpg" alt="دیاگرام انکودر" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">دیاگرام انکودر</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-2">
+                        <div class="album-image-wrapper">
+                            <img src="images/day-two-test2.jpg" alt="آزمایش دوم روز دوم" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">تبدیل گری به باینری</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-2">
+                        <div class="album-image-wrapper">
+                            <img src="images/diagram-test-two.jpg" alt="دیاگرام آزمایش دوم" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">دیاگرام گری به باینری</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-2">
+                        <div class="album-image-wrapper">
+                            <img src="images/hero-day-two.jpg" alt="روز دوم" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">روز دوم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Day 3 Images -->
+                    <div class="album-item" data-category="day-3">
+                        <div class="album-image-wrapper">
+                            <img src="images/day-three.jpg" alt="مدار روز سوم" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">مدار روز سوم</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-3">
+                        <div class="album-image-wrapper">
+                            <img src="images/bcd-diagram.jpg" alt="دیاگرام BCD" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">دیاگرام BCD به 7-Segment</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-3">
+                        <div class="album-image-wrapper">
+                            <img src="images/multiplexer.jpg" alt="مالتی‌پلکسر" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">مالتی‌پلکسر</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-3">
+                        <div class="album-image-wrapper">
+                            <img src="images/multiplexer-diagram.jpg" alt="دیاگرام مالتی‌پلکسر" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">دیاگرام مالتی‌پلکسر</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="album-item" data-category="day-3">
+                        <div class="album-image-wrapper">
+                            <img src="images/hero-day-three.jpg" alt="روز سوم" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">روز سوم</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Easter Egg -->
+                    <div class="album-item easter-egg-item" data-category="easter-egg">
+                        <div class="album-image-wrapper">
+                            <img src="images/easter-egg.jpg" alt="Easter Egg" class="album-image">
+                            <div class="album-overlay">
+                                <span class="album-title">🥚 Easter Egg - مفاجأة!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="image-lightbox" class="lightbox hidden">
+        <div class="lightbox-overlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close">&times;</button>
+            <img id="lightbox-image" src="" alt="تصویر بزرگ">
+        </div>
+    </div>
+
+    <!-- Fixed Footer -->
+    <footer id="main-footer">
+        <div class="footer-content">
+
+            <div class="footer-section">
+                <h3>گزارش کار گروه یک</h3>
+                <p>مهدی پورغفار قره باغ</p>
+                <p>حسام نجف زاده</p>
+                <p>روزبه علوی نیا</p>
+
+            </div>
+            <div class="footer-section">
+                <h3>دانشگاه</h3>
+                <p>آزاد اسلامی واحد ارومیه</p>
+            </div>
+            <div class="footer-section">
+                <h3>رشته تحصیلی</h3>
+                <p>مهندسی کامپیوتر</p>
+            </div>
+            <div class="footer-section">
+                <h3>آزمایشگاه مدار های منطقی</h3>
+                <p>استاد میر توحید اریبی</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
